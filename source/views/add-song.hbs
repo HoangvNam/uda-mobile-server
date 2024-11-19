@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <h3 class="text-center mb-4 add-song">Add Songs</h3>
+    <form id="songForm" action="/add-song" method="POST">
+        <!-- Audio Field -->
+        <div class="mb-3">
+            <label for="audio" class="form-label">Audio URL</label>
+            <input type="text" class="form-control" id="audio" name="audio" required>
+        </div>
+
+        <!-- Image Field -->
+        <div class="mb-3">
+            <label for="image" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="image" name="image" required>
+        </div>
+
+        <!-- Name Field -->
+        <div class="mb-3">
+            <label for="name" class="form-label">Song Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <!-- Singer Field -->
+        <div class="mb-3">
+            <label for="singer" class="form-label">Singer</label>
+            <input type="text" class="form-control" id="singer" name="singer" required>
+        </div>
+
+        <!-- Time Field -->
+        <div class="mb-3">
+            <label for="time" class="form-label">Duration (mm:ss)</label>
+            <input type="text" class="form-control" id="time" name="time" required pattern="^\d{2}:\d{2}$"
+                title="Thời gian phải ở định dạng mm:ss">
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-100 mb-3">Submit</button>
+    </form>
+</div>

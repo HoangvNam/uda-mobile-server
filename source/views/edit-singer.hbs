@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <h3 class="text-center mb-4">Edit Singer</h3>
+    <form action="/edit-singer/{{singer._id}}" method="POST" class="border p-4 rounded shadow-sm bg-light">
+        <!-- Name Field -->
+        <div class="mb-3">
+            <label for="name" class="form-label">Singer Name:</label>
+            <input type="text" id="name" name="name" value="{{singer.name}}" required class="form-control">
+        </div>
+
+        <!-- Avatar Field -->
+        <div class="mb-3">
+            <label for="avatar" class="form-label">Avatar URL:</label>
+            <input type="text" id="avatar" name="avatar" value="{{singer.avatar}}" required class="form-control">
+        </div>
+
+        <!-- Number of Songs Field -->
+        <div class="mb-3">
+            <label for="numberSongs" class="form-label">Number of Songs:</label>
+            <input type="number" id="numberSongs" name="numberSongs" value="{{singer.numberSongs}}" min="0" class="form-control">
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+    </form>
+</div>

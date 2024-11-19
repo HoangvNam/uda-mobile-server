@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <h3 class="text-center mb-4 add-singer">Add Singer</h3>
+    <form id="singerForm" action="/add-singer" method="POST">
+        <!-- Avatar Field -->
+        <div class="mb-3">
+            <label for="avatar" class="form-label">Avatar URL</label>
+            <input type="text" class="form-control" id="avatar" name="avatar" required>
+        </div>
+
+        <!-- Name Field -->
+        <div class="mb-3">
+            <label for="name" class="form-label">Singer Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <!-- Number of Songs Field -->
+        <div class="mb-3">
+            <label for="numberSongs" class="form-label">Number of Songs</label>
+            <input type="number" class="form-control" id="numberSongs" name="numberSongs" min="0">
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-100 mb-3">Submit</button>
+    </form>
+</div>

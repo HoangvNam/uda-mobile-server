@@ -1,0 +1,21 @@
+<div class="container mt-5"></div>
+<h3 class="text-center mb-4 song-list-title">Songs</h3>
+<ul class="list-group task-list">
+    {{#each songs}}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+            <strong>{{this.name}}</strong> - {{this.singer}} - {{this.time}} <br>
+            Path: {{this.audio}}
+        </div>
+        <div class="d-flex">
+            <a href="/edit-song/{{this._id}}" class="btn btn-warning btn-sm me-2">Edit</a>
+            <form action="/delete-song/{{this._id}}" method="POST" class="delete-form">
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+        </div>
+    </li>
+    {{else}}
+    <li class="list-group-item text-center">There are no songs yet.</li>
+    {{/each}}
+</ul>
+</div>

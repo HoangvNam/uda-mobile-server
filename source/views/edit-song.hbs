@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <h3 class="text-center mb-4">Edit Song</h3>
+    <form action="/edit-song/{{song._id}}" method="POST" class="border p-4 rounded shadow-sm bg-light">
+        <div class="mb-3">
+            <label for="name" class="form-label">Song Name:</label>
+            <input type="text" id="name" name="name" value="{{song.name}}" required class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="singer" class="form-label">Singer:</label>
+            <input type="text" id="singer" name="singer" value="{{song.singer}}" required class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="time" class="form-label">Time (mm:ss):</label>
+            <input type="text" id="time" name="time" value="{{song.time}}" required class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="audio" class="form-label">Audio Path:</label>
+            <input type="text" id="audio" name="audio" value="{{song.audio}}" required class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Image Path:</label>
+            <input type="text" id="image" name="image" value="{{song.image}}" required class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+    </form>
+</div>
